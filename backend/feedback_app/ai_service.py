@@ -2,6 +2,7 @@ import os
 import google.generativeai as genai
 from django.conf import settings
 
+gemini_model=os.getenv("GEMINI_MODEL")
 
 def generate_ai_responses(rating, review):
     """
@@ -33,7 +34,7 @@ def generate_ai_responses(rating, review):
                 [your actions here]"""
 
     try:
-        model = genai.GenerativeModel("gemini-2.0-flash")
+        model = genai.GenerativeModel(gemini_model)
         response = model.generate_content(
             contents=prompt, 
             generation_config=genai.GenerationConfig(
