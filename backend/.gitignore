@@ -169,6 +169,7 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
-feedback_app/migrations/*
+feedback_app/migrations/__init__.py
+feedback_app/migrations/__pycache__/
 feedback_project/__init__.py
 feedback_app/__init__.py
